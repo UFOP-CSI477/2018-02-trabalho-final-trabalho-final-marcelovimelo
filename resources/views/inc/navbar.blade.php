@@ -25,7 +25,7 @@
           <li><a href="/login">Login</a></li>
           <li><a href="/register">Cadastrar</a></li>
         </ul>
-      </div><!--/.nav-collapse -->
+      </div>
     </div>
 
   </nav>
