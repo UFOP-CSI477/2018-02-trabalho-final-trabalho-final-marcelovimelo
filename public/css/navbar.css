@@ -1,0 +1,61 @@
+html,
+body,
+header,
+.view {
+  height: 100%;
+}
+
+
+h1,
+h3,
+h5,
+body,
+button,
+.navbar-brand,
+.navbar-nav a {
+  font-family: 'Signika Negative', sans-serif;
+}
+
+.vcenter {
+    display: inline-block;
+    vertical-align: middle;
+    float: none;
+}
+
+.navbar-nav > li > a {
+    color: black;
+}
+
+.navbar .container .navbar-brand {
+    color: #373535;
+    font-size: 40px;
+    margin: 8px 0;
+}
+
+.navbar-default {
+    background-color: transparent;
+}
+
+
+.top-nav-collapse {
+  background-color: #78909c !important;
+}
+
+.navbar:not(.top-nav-collapse) {
+  background: transparent !important;
+}
+
+
+
+h1 {
+  letter-spacing: 0px;
+}
+
+h5 {
+  letter-spacing: 0px;
+}
+
+.hr-light {
+  border-top: 3px solid #fff;
+  width: 80px;
+}
