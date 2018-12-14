@@ -33,7 +33,7 @@
 <br>
 <footer class="footer text-center">
     <div class="container">
-        <p>Copyright 2018 &copy; ReciclaJM - Design by Marcelo Melo</p>
+        <p>Copyright 2018 &copy; ReciclaJM</p>
     </div>
 </footer>
 
