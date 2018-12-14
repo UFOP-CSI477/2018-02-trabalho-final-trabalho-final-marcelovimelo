@@ -8,7 +8,7 @@
       <span class="media-left">
           <img src="/img/kids.png" alt="Crianças em volta de uma planta">
       </span>
-      <div class="media-body media-right">
+      <div class="media-body media-right #Sobre">
           <h1 class="media-heading">Sobre</h1>
           <p class="text-justify">Reciclar é transformar materiais já utilizados em produtos novos para consumo. Esta necessidade foi despertada a partir do conhecimento dos benefícios que essa prática traz para o planeta terra. São atitudes simples que contribuem com o meio ambiente. Não podemos deixar a correria do dia a dia nos fazer esquecer ou simplesmente deixar de fazer essas ações simples, isso ao longo dos anos influencia negativamente nosso cotidiano. O ser humano é muito displicente em relação ao lixo, é importante lembrar o enorme tempo necessário para decomposição dos materiais recicláveis, nisso já observamos tamanha a importância da técnica de reciclagem.
           </p>
@@ -20,6 +20,26 @@
 
       </div>
   </div>
+
+  <h1>Fale Conosco</h1>
+
+  {!! Form::open(['url' => 'home/enviar']) !!}
+      <div class="form-group">
+       {{Form::label('nome', 'Nome')}}
+       {{Form::text('nome','',['class' => 'form-control','placeholder' => 'Digite seu nome'])}}
+     </div>
+      <div class="form-group">
+       {{Form::label('email', 'E-mail')}}
+       {{Form::text('email','',['class' => 'form-control','placeholder' => 'Digite o seu E-mail'])}}
+       </div>
+       <div class="form-group">
+       {{Form::label('mensagem', 'Mensagem')}}
+       {{Form::textarea('mensagem', '',['class' => 'form-control','placeholder' => 'Digite sua Mensagem'])}}
+     </div>
+     <div>
+       {{Form::submit('Enviar',['class'=>'btn btn-primary'])}}
+     </div>
+   {!! Form::close() !!}
 
 
 

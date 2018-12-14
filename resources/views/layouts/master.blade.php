@@ -5,6 +5,8 @@
     <title>ReciclaJM</title>
     <link rel="stylesheet" href="<?php echo asset('css/bootstrap.css')?>" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Signika+Negative:700" rel="stylesheet">
+    <link rel="stylesheet" href="<?php echo asset('css/navbar.css')?>" type="text/css">
+    <meta name="csrf-token" content="{{ csrf_token() }}">
   </head>
   <body>
     @include('inc.navbar')
@@ -27,8 +29,12 @@
       </div>
     </div>
     </div>
-<footer id="footer" class="text-center">
-<p>Copyright 2018 &copy; ReciclaJM - Design by Marcelo Melo</p>
+<br>
+<br>
+<footer class="footer text-center">
+    <div class="container">
+        <p>Copyright 2018 &copy; ReciclaJM - Design by Marcelo Melo</p>
+    </div>
 </footer>
 
   </body>

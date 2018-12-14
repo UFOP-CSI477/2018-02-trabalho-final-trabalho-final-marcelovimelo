@@ -15,6 +15,12 @@ Route::get('/', function () {
     return view('home');
 });
 
+
+Route::get('/fire', function () {
+    event(new ColetaStatusChanged);
+    return 'Fired';
+});
+
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
@@ -22,3 +28,5 @@ Route::get('/home', 'HomeController@index')->name('home');
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+Route::post('/home/enviar', 'MensagensController@enviar');

@@ -15,6 +15,9 @@ class EventServiceProvider extends ServiceProvider
      * @var array
      */
     protected $listen = [
+      'App\Events\ColetaStatusChanged' => [
+          'App\Listeners\ColetaStatusChangedListener'
+      ],
         Registered::class => [
             SendEmailVerificationNotification::class,
         ],

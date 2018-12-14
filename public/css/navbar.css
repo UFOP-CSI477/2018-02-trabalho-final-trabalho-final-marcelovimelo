@@ -59,3 +59,16 @@ h5 {
   border-top: 3px solid #fff;
   width: 80px;
 }
+
+
+.footer {
+  bottom: 0;
+  width: 100%;
+  /* Set the fixed height of the footer here */
+  height: 60px;
+  background-color: #999999;
+}
+
+.footer {
+  padding: 15px 0;
+}
