@@ -23,7 +23,7 @@
 
 
           </div>
-          <a class="navbar-left" href="#"><img src="/img/reciclajm.png" height="50" alt=""></a>
+          <a class="navbar-left" href="/"><img src="/img/reciclajm.png" height="50" alt=""></a>
             <ul class="nav navbar-nav navbar-right">
                 <!-- Authentication Links -->
                 @guest

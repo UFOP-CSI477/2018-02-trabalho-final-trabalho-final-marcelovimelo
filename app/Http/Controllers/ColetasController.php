@@ -41,4 +41,10 @@ class ColetasController extends Controller
     return redirect('/obrigado')->with('success', 'Coleta Solcitada com Sucesso');
 
   }
+
+
+  public function getColetas(){
+  $Coletas1 = Coleta::all();
+  return view('listcoletas')->with('Coletas1',$Coletas1);
+}
 }

@@ -22,4 +22,9 @@ class MensagensController extends Controller
 
   return redirect('/')->with('success', 'Mensagem Enviada com Sucesso');
 }
+
+public function getMensagens(){
+$Mensagens1 = Mensagem::all();
+return view('listmensagens')->with('Mensagens1',$Mensagens1);
+}
 }

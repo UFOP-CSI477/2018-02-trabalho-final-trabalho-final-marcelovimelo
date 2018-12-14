@@ -35,6 +35,12 @@ Route::get('/obrigado', function () {
     return view('obrigado');
 });
 
+Route::get('/admin', function () {
+    return view('admin');
+});
+
 Route::post('/home/enviar', 'MensagensController@enviar');
 Route::post('/coleta/requisitar', 'ColetasController@requisitar');
 Route::post('/coleta/store', 'ColetasController@store');
+Route::get('/listcoletas', 'ColetasController@getColetas');
+Route::get('/listmensagens', 'MensagensController@getMensagens');
