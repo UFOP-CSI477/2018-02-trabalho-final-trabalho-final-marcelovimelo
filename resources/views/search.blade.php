@@ -9,7 +9,6 @@
                             <thead>
                                 <tr>
                                     <th>ID</th>
-                                    <th>Nome usuário</th>
                                     <th>Endereço</th>
                                     <th>Quantidade</th>
                                     <th>Tipos</th>
@@ -20,7 +19,6 @@
                                 @foreach ($Coletas2 as $Coletas)
                                     <tr>
                                         <td>{{ $Coletas->id }}</td>
-                                        <td>{{ $Coletas->user1->name }}</td>
                                         <td>{{ $Coletas->endereco }}</td>
                                         <td>{{ $Coletas->qtd }}</td>
                                         <td>{{ $Coletas->tipos }}</td>

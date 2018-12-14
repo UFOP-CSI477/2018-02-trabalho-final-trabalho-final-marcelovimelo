@@ -25,15 +25,12 @@
                     <br>
                     <br>
 
-                    <form action="/search" method="post">
+                    <form method="POST" action="/search">
                       @csrf
-                      <div class="input-group">
-                        <input type="search" name="search" class="form-control">
-                        <span class="input-group-prepend">
-                          <button type="submit" name="btn btn-primary">Pesquisar</button>
-                        </span>
-                      </div>
+                      <input type="search" name="search" class="form-control">
+                      {{Form::submit('Listar Coletas',['class'=>'btn btn-danger'])}}
                     </form>
+
                         </div>
                     </div>
                 </div>
