@@ -17,10 +17,10 @@ class CreateColetasTable extends Migration
             $table->increments('id');
             $table->integer('user_id')->unsigned();
             $table->foreign('user_id')->references('id')->on('users');
-            $table->string('endereco')->nullable();
-            $table->integer('qtd')->nullable();
-            $table->string('tipos')->nullable();
-            $table->string('disp')->nullable();
+            $table->string('endereco');
+            $table->integer('qtd');
+            $table->string('tipos');
+            $table->string('disp');
             $table->timestamps();
         });
     }

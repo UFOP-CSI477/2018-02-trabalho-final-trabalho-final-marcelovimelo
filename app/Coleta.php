@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Coleta extends Model
 {
-  protected $fillable = ['user_id', 'endereco', 'qtd', 'tipo', 'disp'];
+  protected $fillable = ['user_id', 'endereco', 'qtd', 'tipos', 'disp'];
 
   public function user()
     {

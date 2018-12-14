@@ -31,10 +31,10 @@ Route::get('/coleta', function () {
     return view('coleta');
 });
 
-Route::middleware('auth')->group(function () {
-    Route::post('/coleta/store', 'ColetasController@store');
-    Route::post('/coleta/requisitar', 'ColetasController@requisitar');
+Route::get('/obrigado', function () {
+    return view('obrigado');
 });
 
-
 Route::post('/home/enviar', 'MensagensController@enviar');
+Route::post('/coleta/requisitar', 'ColetasController@requisitar');
+Route::post('/coleta/store', 'ColetasController@store');

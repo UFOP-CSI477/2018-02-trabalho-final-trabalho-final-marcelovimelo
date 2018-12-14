@@ -11,7 +11,6 @@ class ColetasController extends Controller
   $this->validate($request,[
   'endereco'=> 'required',
   'qtd'=> 'required',
-  'tipo'=>'required',
   'disp'=>'required'
   ]);
 
@@ -24,22 +23,22 @@ class ColetasController extends Controller
   $coleta->save();
 
   return redirect('/')->with('success', 'Mensagem Enviada com Sucesso');
-
+}
   public function store(Request $request)
   {
     $request->validate([
         'endereco' => 'required',
-        'tipo' => 'required',
+        'tipos' => 'required'
     ]);
 
-    $consulta = Consulta::create([
+    $consulta = Coleta::create([
         'user_id' => auth()->user()->id,
         'endereco' => $request->endereco,
         'qtd' => $request->qtd,
         'tipos' => implode(', ', $request->tipos),
         'disp' => $request->disp,
     ]);
+    return redirect('/obrigado')->with('success', 'Coleta Solcitada com Sucesso');
 
-    return redirect('/')->with('success', 'Mensagem Enviada com Sucesso');
   }
 }
