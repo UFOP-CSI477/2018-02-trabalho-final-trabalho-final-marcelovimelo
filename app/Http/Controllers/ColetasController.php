@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Coleta;
+use Auth;
 
 class ColetasController extends Controller
 {
@@ -47,4 +48,13 @@ class ColetasController extends Controller
   $Coletas1 = Coleta::all();
   return view('listcoletas')->with('Coletas1',$Coletas1);
 }
+
+
+public function search(Request $request){
+  $search = $request->get('search');
+  $Coletas2 = \DB::table('coletas')->where('user_id', 'like', '%'. $search. '%')->paginate(10);
+  return view('search')->with('Coletas2', $Coletas2);
+}
+
+
 }

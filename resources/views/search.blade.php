@@ -1,9 +1,9 @@
 @extends('layouts.app')
 
 @section('content')
-  <h1>Todas Coletas</h1>
+  <h1>Resultado de Pesquisa por usuario</h1>
 
-  @if(count($Coletas1) > 0)
+  @if(count($Coletas2) > 0)
   <div class="table-responsive card body">
                         <table class="table table-striped table-bordered">
                             <thead>
@@ -17,7 +17,7 @@
                                 </tr>
                             </thead>
                             <tbody>
-                                @foreach ($Coletas1 as $Coletas)
+                                @foreach ($Coletas2 as $Coletas)
                                     <tr>
                                         <td>{{ $Coletas->id }}</td>
                                         <td>{{ $Coletas->user1->name }}</td>

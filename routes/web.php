@@ -42,5 +42,6 @@ Route::get('/admin', function () {
 Route::post('/home/enviar', 'MensagensController@enviar');
 Route::post('/coleta/requisitar', 'ColetasController@requisitar');
 Route::post('/coleta/store', 'ColetasController@store');
-Route::get('/listcoletas', 'ColetasController@getColetas');
+Route::post('/listcoletas', 'ColetasController@getColetas');
+Route::post('/search', 'ColetasController@search');
 Route::get('/listmensagens', 'MensagensController@getMensagens');
