@@ -21,12 +21,20 @@ Route::get('/fire', function () {
     return 'Fired';
 });
 
-Auth::routes();
-
 Route::get('/home', 'HomeController@index')->name('home');
 
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+Route::get('/coleta', function () {
+    return view('coleta');
+});
+
+Route::middleware('auth')->group(function () {
+    Route::post('/coleta/store', 'ColetasController@store');
+    Route::post('/coleta/requisitar', 'ColetasController@requisitar');
+});
+
 
 Route::post('/home/enviar', 'MensagensController@enviar');

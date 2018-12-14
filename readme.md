@@ -9,7 +9,11 @@
 
 ### Resumo
 <<<<<<< HEAD
+<<<<<<< HEAD
 Desenvolver um aplicativo para facilitar a doação do material reciclável da população, que muitas vezes não recebe o destino correto e acaba indo para o lixo comum. Essa aplicação está voltada principalmente para o auxilio da ATLIMARJOM (Associação dos trabalhadores de Limpeza e Material Reciclado de João Monlevade), indicando em quais residências possuem materiais recicláveis para que possam ser recolhidos pelo catador da associação através de uma rota definida.
+=======
+Desenvolver um aplicativo para facilitar a doação do material reciclável da população, que muitas vezes não recebe o destino correto e acaba indo para o lixo comum. Essa aplicação está voltada principalmente para o auxilio da ATLIMARJOM (Associação dos trabalhadores de Limpeza e Material Reciclado de João Monlevade), indicando em quais residências possuem materiais recicláveis para que possam ser recolhidos pelo catador da associação através de uma rota definida.
+>>>>>>> b1e1e720bf7925627efffbe5ef62cc22ada21441
 =======
 Desenvolver um aplicativo para facilitar a doação do material reciclável da população, que muitas vezes não recebe o destino correto e acaba indo para o lixo comum. Essa aplicação está voltada principalmente para o auxilio da ATLIMARJOM (Associação dos trabalhadores de Limpeza e Material Reciclado de João Monlevade), indicando em quais residências possuem materiais recicláveis para que possam ser recolhidos pelo catador da associação através de uma rota definida.
 >>>>>>> b1e1e720bf7925627efffbe5ef62cc22ada21441

@@ -11,10 +11,12 @@
 
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}" defer></script>
+    <script src="{{ asset('js/check.js') }}" defer></script>
 
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Signika+Negative:700" rel="stylesheet">
     <link rel="stylesheet" href="<?php echo asset('css/navbar.css')?>" type="text/css">
 </head>
 <body>

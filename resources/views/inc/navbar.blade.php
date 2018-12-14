@@ -46,7 +46,7 @@
                     <div class="col-5 align-self-center col-md-8 mb-8 white-text text-left">
                       <h1 class="h1-reponsive text-uppercas mb-4 pt-md-5" data-wow-delay="0.3s"><strong>Cuidando do futuro dos nossos filhos é das futuras Gerações</strong></h1>
                       <h5 class="mb-6" data-wow-delay="0.4s"><strong>Um aplicativo para facilitar a doação do material reciclável voltado <br> principalmente para o auxilio da ATLIMARJOM (Associação dos <br> trabalhadores de Limpeza e Material Reciclado de João Monlevade)</strong></h5>
-                      <button type="button" class="btn btn-success btn-lg">Solicite a Coleta Agora</button>
+                      <a href="/coleta" class="btn btn-success btn-lg" role="button">Solicite a Coleta Agora</a>
                     </div>
 
                   </div>

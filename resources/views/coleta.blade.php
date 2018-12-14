@@ -1,11 +1,12 @@
 @extends('layouts.app')
 
+
 @section('content')
 <div class="container">
     <div class="row">
-        <div class="col-md-8 col-md-offset-2">
+        <div class="col-md-8 col-md-offset-2 card">
             <div class="panel panel-default">
-                <div class="panel-heading">Solicitar Coleta</div>
+                <div class="panel-heading"><h1>Solicitar Coleta</h1></div>
 
                 <div class="panel-body">
                     @if (session('status'))
@@ -16,48 +17,41 @@
 
                     <order-alert user_id="{{ auth()->user()->id }}"></order-alert>
 
-                    <div class="row">
-                        <div class="col-lg-12">
-                            <form method="post" action="{{ route('user.orders.store') }}" class="form-horizontal">
-                                {{ csrf_field() }}
+                    {!! Form::open(['url' => 'user/coleta/store']) !!}
+                        <div class="form-group">
+                           {{ csrf_field() }}
+                         {{Form::label('endereco', 'Endereço')}}
+                         {{Form::text('endereco','',['class' => 'form-control','placeholder' => 'Digite seu Endereço'])}}
+                       </div>
+                        <div class="form-group">
+                         {{Form::label('qtd', 'Quantidade de Material')}}
+                         {{Form::number('qtd','',['class' => 'form-control','placeholder' => 'Quantidade de sacos de 100L'])}}
+                         </div>
 
-                                <div class="form-group"><label class="col-sm-2 control-label">Endereço</label>
-                                    <div class="col-sm-10"><input type="text" name="address" placeholder="Seu Endereço" class="form-control"></div>
-                                </div>
-
-                                <div class="hr-line-dashed"></div>
-                                <div class="form-group"><label class="col-sm-2 control-label">Tipos de Material</label>
-                                    <div class="col-sm-10">
-                                        <label class="checkbox-inline">
-                                            <input type="checkbox" name="toppings[]" value="papel" id="papel"> Papel
-                                        </label>
-                                        <label class="checkbox-inline">
-                                            <input type="checkbox" name="toppings[]" value="plastico" id="plastico"> Plástico
-                                        </label>
-                                        <label class="checkbox-inline">
-                                            <input type="checkbox" name="toppings[]" value="aluminio" id="aluminio"> Alumínio
-                                        </label>
-                                        <label class="checkbox-inline">
-                                            <input type="checkbox" name="toppings[]" value="vidro" id="vidro"> Vidro
-                                        </label>
+                         <div class="form-group"><label class="col-sm-12 control-label">Tipos de Material</label>
+                                    <div class="col-sm-12">
+                                      <div class="controls span2">
+                                        <div class="col-md-3"><label class="btn btn-primary"><img src="img/papel.png" alt="Papel" class="img-thumbnail img-check"><input type="checkbox" name="tipos[]" id="papel" value="papel" class="hidden" autocomplete="off"></label></div>
+                                        <div class="col-md-3"><label class="btn btn-primary"><img src="img/platico.png" alt="Plástico" class="img-thumbnail img-check"><input type="checkbox" name="tipos[]" id="plastico" value="plastico" class="hidden" autocomplete="off"></label></div>
+                                        </div>
+                                        <div class="controls span2">
+                                        <div class="col-md-3"><label class="btn btn-primary"><img src="img/aluminio.png" alt="Alumínio" class="img-thumbnail img-check"><input type="checkbox" name="tipos[]" id="aluminio" value="aluminio" class="hidden" autocomplete="off"></label></div>
+                                        <div class="col-md-3"><label class="btn btn-primary"><img src="img/vidro.png" alt="Vidro" class="img-thumbnail img-check"><input type="checkbox" name="tipos[]" id="item4" value="vidro" class="vidro" autocomplete="off"></label></div>
+                                        </div>
                                     </div>
                                 </div>
-                                <div class="hr-line-dashed"></div>
 
-                                <div class="hr-line-dashed"></div>
-                                <div class="form-group"><label class="col-sm-2 control-label">Instructions</label>
-
-                                    <div class="col-sm-10"><input type="text" name="instructions" placeholder="Special Instructions here" class="form-control"></div>
                                 </div>
 
-                                <div class="hr-line-dashed"></div>
-                                <div class="form-group">
-                                    <div class="col-sm-4 col-sm-offset-2">
-                                        <button class="btn btn-success" type="submit">Solicitar coleta Agora</button>
-                                    </div>
-                                </div>
-                            </form>
-
+                         <div class="form-group">
+                         {{Form::label('disp', 'Disponibilidade')}}
+                         {{Form::text('disp', '',['class' => 'form-control','placeholder' => 'Exemplo: 12h00 -14h00'])}}
+                       </div>
+                       <div>
+                         {{Form::submit('Solicitar Coleta',['class'=>'btn btn-primary'])}}
+                       </div>
+                       <br>
+                     {!! Form::close() !!}
 
                         </div>
                     </div>
